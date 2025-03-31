@@ -2,3 +2,5 @@
 # thread: https://xymake.com/janwilmake/status/1906601421664833750
 
 curl -s https://xymake.com/janwilmake/status/1906585720447189401 | curl -d @- -d @prompt.md http://localhost:8787
+
+# run server with 'wrangler dev main.js'
