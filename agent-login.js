@@ -1,5 +1,6 @@
 // Hardcoded user credentials for demonstration
 // try this with: curl http://alice:123456@localhost:8787
+// also works in browser! try visiting http://@localhost:8787
 
 const userCredentials = {
   alice: {
@@ -24,6 +25,7 @@ export default {
     // 1. Parse the Authorization header to get username/password
     const authorization = request.headers.get("Authorization");
     if (!authorization || !authorization.startsWith("Basic ")) {
+      // Could supply visitor ux here
       return new Response(
         JSON.stringify({
           error: "invalid_client",
